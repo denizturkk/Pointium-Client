@@ -14,5 +14,4 @@ export interface Project {
     assignerFirstName:string;
     assignerLastName:string;
     assignerMail:string;
-
 }
