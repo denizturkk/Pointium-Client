@@ -1,0 +1,33 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div *ngFor="let project of projects" class="col-sm-4">
+                <div  class="card">
+                    
+                    <div class="card-header card-chart card-header-info">
+                        <div class="ct-chart" id="dailySalesChart"></div>
+                    </div>
+
+                    <div class="card-body">
+                        <h3 class="card-title">{{project.projectName}}</h3>
+                        <h3>{{project.companyName}}</h3>
+
+                        <h4>{{project.leadByEMail}}</h4>
+                        
+                        <h5>{{project.id}}</h5>
+                        
+                    </div>
+                    
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <tr>{{project.assignerMail}}</tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<div>
+
+    
