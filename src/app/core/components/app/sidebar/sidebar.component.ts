@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from '@angular/router';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -7,18 +8,23 @@ declare interface RouteInfo {
     icon: string;
     class: string;
 }
-export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/project', title: 'Projects',  icon: 'webstories', class: '' },
 
-    // { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    // { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
-    // { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    // { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    // { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    // { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
+
+export const ADMINCONNECTEDROUTES: RouteInfo[] = [
+  { path:'/projects/projectdetails/:id', title: 'ProjectDetails',  icon: 'webstories', class: '' }
+]
+
+export const ADMINROUTES: RouteInfo[] = [
+    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
+    { path: '/projects', title: 'Projects',  icon: 'webstories', class: '' },
+    {path: '/users', title: 'Users',  icon: 'person', class: ''},
+    {path: '/customers', title: 'Customers',  icon: 'handshake', class: ''},
+    {path: '/departments', title: 'Departments',  icon: 'group', class: ''},
+    {path: '/fields', title: 'Fields',  icon: 'hub', class: ''},
+    {path: '/jobTitles', title: 'JobTitles',  icon: 'work', class: ''},   
 ];
+
+
 
 @Component({
   selector: 'app-sidebar',
@@ -31,7 +37,7 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    this.menuItems = ADMINROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {
       if ($(window).width() > 991) {

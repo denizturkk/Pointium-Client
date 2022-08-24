@@ -1,0 +1,32 @@
+
+<div _ngcontent-mrn-c8 class="main-content">
+    <div _ngcontent-mrn-c8 class="container-fluid">
+      <div _ngcontent-mrn-c8 class="row">
+        
+          <div class="card">
+          <div class="card-header card-header-warning">
+            <h4 class="card-title">Fields</h4>
+            <p class="card-category">Here is a subtitle for this table</p>
+          </div>
+
+          <div class="card-content table-responsive table-full-width">
+            <table class="table">          
+                <thead class="text-danger">
+                <th>Id</th>
+                <th>Field Name</th>
+                <th>Is Deleted</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let field of fields">
+                  <th>{{field.id}}</th>
+                  <th>{{field.fieldName}}</th>
+                  <th>{{field.isDeleted}}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -11,6 +11,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { AdminLayoutRoutes } from '../components/app/layouts/admin-layout/admin-layout.routing';
 import { ProjectComponent } from '../components/admin/project/project.component';
+import { UserComponent } from '../components/admin/user/user.component';
+import { CustomerComponent } from '../components/admin/customer/customer.component';
+import { FieldComponent } from '../components/admin/field/field.component';
+import { DepartmentComponent } from '../components/admin/department/department.component';
+import { JobTitleComponent } from '../components/admin/job-title/job-title.component';
+import { ProjectDetailsComponent } from '../components/admin/project-details/project-details.component';
 
 
 @NgModule({
@@ -30,8 +36,12 @@ import { ProjectComponent } from '../components/admin/project/project.component'
   declarations: [
     DashboardComponent,
     ProjectComponent,
-
+    UserComponent,
+    CustomerComponent,
+    FieldComponent,
+    DepartmentComponent,
+    JobTitleComponent,
+    ProjectDetailsComponent
   ]
 })
-
 export class AdminLayoutModule {}

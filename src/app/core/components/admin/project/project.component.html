@@ -1,7 +1,8 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div *ngFor="let project of projects" class="col-sm-4">
+            
+            <div  *ngFor="let project of projects" class="col-sm-4">
                 <div  class="card">
                     
                     <div class="card-header card-chart card-header-info">
@@ -15,13 +16,13 @@
                         <h4>{{project.leadByEMail}}</h4>
                         
                         <h5>{{project.id}}</h5>
-                        
+                        <tr>{{project.assignerMail}}</tr>
+                               
                     </div>
                     
                     <div class="card-footer">
                         <div class="card-stats">
-                            <tr>{{project.assignerMail}}</tr>
-                        </div>
+                              <button mat-raised-button class="btn btn-info" routerLink="/projects/projectdetails/{{project.id}}">Show Details</button>      
                     </div>
                 </div>
             </div>

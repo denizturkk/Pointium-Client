@@ -17,8 +17,8 @@ const routes: Routes =[
     component: AdminLayoutComponent,
     children: [{
       path: '',
+      //async metotdur ve import()-> dinamik import yapmak icin
       loadChildren: () => import('./core/modules/admin-layout.module').then(m => m.AdminLayoutModule)
-      //loadChildren: './core/modules/admin-layout.module#AdminLayoutModule'
     }]
   }
 ];
@@ -32,6 +32,6 @@ const routes: Routes =[
     })
   ],
   exports: 
-  [ RouterModule],
+  [RouterModule],
 })
 export class AppRoutingModule { }

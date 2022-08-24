@@ -1,0 +1,35 @@
+<div _ngcontent-mrn-c8 class="main-content">
+    <div _ngcontent-mrn-c8 class="container-fluid">
+      <div _ngcontent-mrn-c8 class="row">
+        
+          <div class="card">
+          <div class="card-header card-header-warning">
+            <h4 class="card-title">Departments</h4>
+            <p class="card-category">Here is a subtitle for this table</p>
+          </div>
+
+          <div class="card-content table-responsive table-full-width">
+            
+            <table class="table">          
+                <thead class="text-danger">
+                <th>Id</th>
+                <th>Field Name</th>
+                <th>Department Name</th>
+                <th>Is Deleted</th>
+              </thead>
+              
+              <tbody>
+                <tr *ngFor="let department of departments">
+                  <th>{{department.id}}</th>
+                  <th>{{department.fieldName}}</th>
+                  <th>{{department.departmentName}}</th>
+                  <th>{{department.isDeleted}}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

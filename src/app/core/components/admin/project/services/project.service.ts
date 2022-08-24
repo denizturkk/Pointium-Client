@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Project } from '../models/project';
 import { environment } from '../../../../../../environments/environment';
 import { ListResponseModel } from 'app/core/models/listResponseModel';
+import { User } from '../../user/models/user';
+import { SingleResponseModel } from 'app/core/models/singleResponseModel';
 
 
 @Injectable({
@@ -16,6 +18,11 @@ export class ProjectService {
   
   getProjectList(): Observable<ListResponseModel<Project>> 
   {
-    return this.httpClient.get<ListResponseModel<Project>>(environment.getApiUrl +"/Projects/getall");
+    return this.httpClient.get<ListResponseModel<Project>>(environment.getApiUrl +"/projects/getall");
   }
+
+  getProjectById(id:string){
+    return this.httpClient.get<SingleResponseModel<Project>>(environment.getApiUrl+"/projects/getbyid?id="+id)
+  }
+
 }

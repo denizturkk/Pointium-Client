@@ -1,0 +1,35 @@
+<div _ngcontent-mrn-c8 class="main-content">
+  <div _ngcontent-mrn-c8 class="container-fluid">
+    <div _ngcontent-mrn-c8 class="row">
+      
+        <div class="card">
+        <div class="card-header card-header-warning">
+          <h4 class="card-title">Users</h4>
+          <p class="card-category">Here is a subtitle for this table</p>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+          <table class="table">
+            <thead class="text-danger">
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Department</th>
+              <th>Job Title</th>
+              <th>E-Mail</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <th>{{user.id}}</th>
+                <th>{{user.firstName}}</th>
+                <th>{{user.lastName}}</th>
+                <th>{{user.departmentName}}</th>
+                <th>{{user.jobTitleName}}</th>
+                <td class="text-info">{{user.email}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
