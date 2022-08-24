@@ -46,8 +46,9 @@ export class ProjectDetailsComponent implements OnInit {
     this.projectService.getProjectById(this.projectId).subscribe(response=>{
       if(response.success==true)
       {
-          this.project==response.data;  
+          this.project=response.data;  
           this.dataLoaded=true;
+          
           
       }
       else{

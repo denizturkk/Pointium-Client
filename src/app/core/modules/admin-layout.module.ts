@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from '../components/app/dashboard/dashboard.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -17,6 +17,7 @@ import { FieldComponent } from '../components/admin/field/field.component';
 import { DepartmentComponent } from '../components/admin/department/department.component';
 import { JobTitleComponent } from '../components/admin/job-title/job-title.component';
 import { ProjectDetailsComponent } from '../components/admin/project-details/project-details.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({

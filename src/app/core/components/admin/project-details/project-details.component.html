@@ -9,11 +9,11 @@
                     <i class="material-icons">info_outline</i>
                 </div>
                 <p class="card-category"></p>
-                <h3 class="card-title">{{project.id}}</h3>
+                <h6 class="card-title" *ngIf="dataLoaded">{{project.projectName}}</h6>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">local_offer</i> Tracked from Github
+                    <i class="material-icons">local_offer</i> {{project.leadByEMail}}
                 </div>
             </div>
         </div>
