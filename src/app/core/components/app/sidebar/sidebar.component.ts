@@ -11,7 +11,8 @@ declare interface RouteInfo {
 
 
 export const ADMINCONNECTEDROUTES: RouteInfo[] = [
-  { path:'/projects/projectdetails/:id', title: 'ProjectDetails',  icon: 'webstories', class: '' }
+  { path:'/projects/projectdetails/:id', title: 'ProjectDetails',  icon: 'webstories', class: '' },
+  { path:'/projects/add', title: 'ProjectAdd',  icon: 'add', class: '' }
 ]
 
 export const ADMINROUTES: RouteInfo[] = [

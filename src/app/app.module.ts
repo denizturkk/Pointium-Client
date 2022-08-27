@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './core/modules/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './core/components/app/layouts/admin-layout/admin-layout.component';
+import { ProjectAddComponent } from './core/components/admin/project-add/project-add.component';
+
 
 
 
@@ -26,7 +28,8 @@ import { AdminLayoutComponent } from './core/components/app/layouts/admin-layout
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    AdminLayoutComponent
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

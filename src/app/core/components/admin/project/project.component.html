@@ -1,34 +1,95 @@
 <div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            
-            <div  *ngFor="let project of projects" class="col-sm-4">
-                <div  class="card">
-                    
-                    <div class="card-header card-chart card-header-info">
-                        <div class="ct-chart" id="dailySalesChart"></div>
+  <div class="container-fluid">
+    <div class="row">
+     
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">add</i>
                     </div>
 
-                    <div class="card-body">
-                        <h3 class="card-title">{{project.projectName}}</h3>
-                        <h3>{{project.companyName}}</h3>
-
-                        <h4>{{project.leadByEMail}}</h4>
-                        
-                        <h5>{{project.id}}</h5>
-                        <tr>{{project.assignerMail}}</tr>
-                               
-                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"> <button mat-raised-button class="btn btn-success" routerLink="/projects/add">Add Project</button></h3>
                     
-                    <div class="card-footer">
-                        <div class="card-stats">
-                              <button mat-raised-button class="btn btn-info" routerLink="/projects/projectdetails/{{project.id}}">Show Details</button>      
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">info</i> use this for create a new project
                     </div>
                 </div>
+            </div>
+          </div>  
+
+
+
+        <div *ngFor="let project of projects" class="col-md-4">
+            
+            <div class="card">
+                <div class="card-header card-chart card-header-info">
+                    <div class="ct-chart" id="dailySalesChart">
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <h4 class="card-title">{{ project.projectName }}</h4>
+                    <h3>{{ project.companyName }}</h3>
+                    <h4>{{ project.leadByEMail }}</h4>
+                    <h5>{{ project.id }}</h5>
+                    <tr>{{project.assignerMail}}</tr>
+
+                    <p class="card-category"></p>
+                </div>
+            
+            
+                <div class="card-footer">
+                 <div class="card-stats">
+                    <button mat-raised-button class="btn btn-info" routerLink="/projects/projectdetails/{{project.id}}">Show Details</button>
+                 </div>
+                </div>  
             </div>
         </div>
 
     </div>
-<div>
+  </div>
+</div>
 
-    
+<!-- <div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div *ngFor="let project of projects" class="col-md-4">
+        <div class="card">
+          <div class="card-header card-chart card-header-info">
+            <div class="ct-chart" id="dailySalesChart"></div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-title">{{ project.projectName }}</h3>
+            <h3>{{ project.companyName }}</h3>
+
+            <h4>{{ project.leadByEMail }}</h4>
+
+            <h5>{{ project.id }}</h5>
+            <tr>
+              {{
+                project.assignerMail
+              }}
+            </tr>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-stats">
+              <button
+                mat-raised-button
+                class="btn btn-info"
+                routerLink="/projects/projectdetails/{{ project.id }}"
+              >
+                Show Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

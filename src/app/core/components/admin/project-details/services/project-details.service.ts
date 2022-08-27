@@ -10,7 +10,9 @@ import { UserOfProject } from '../models/userOfProject';
 })
 export class ProjectDetailsService {
 
-  constructor(private httpClient:HttpClient) { }
+  
+  constructor(private httpClient:HttpClient) {   
+  }
   
   
   getUsersByProjectId(projectId:string):Observable<ListResponseModel<UserOfProject>>

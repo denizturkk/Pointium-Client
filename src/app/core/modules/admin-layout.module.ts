@@ -18,6 +18,7 @@ import { DepartmentComponent } from '../components/admin/department/department.c
 import { JobTitleComponent } from '../components/admin/job-title/job-title.component';
 import { ProjectDetailsComponent } from '../components/admin/project-details/project-details.component';
 import { RouterModule } from '@angular/router';
+import { ProjectAddComponent } from '../components/admin/project-add/project-add.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { RouterModule } from '@angular/router';
     FieldComponent,
     DepartmentComponent,
     JobTitleComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    ProjectAddComponent
   ]
 })
 export class AdminLayoutModule {}
