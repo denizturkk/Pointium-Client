@@ -2,7 +2,27 @@
   <div _ngcontent-mrn-c8 class="container-fluid">
     <div _ngcontent-mrn-c8 class="row">
       
-        <div class="card">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                    <i class="material-icons">add</i>
+                </div>
+
+                <p class="card-category"></p>
+                <h3 class="card-title"> <button mat-raised-button class="btn btn-success" routerLink="/users/add">Create New User</button></h3>
+                
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <i class="material-icons">info</i> use this for create a new user
+                </div>
+            </div>
+        </div>
+      </div>  
+
+
+      <div class="card">
         <div class="card-header card-header-warning">
           <h4 class="card-title">Users</h4>
           <p class="card-category">Here is a subtitle for this table</p>
@@ -30,6 +50,8 @@
           </table>
         </div>
       </div>
+
+
     </div>
   </div>
 </div>

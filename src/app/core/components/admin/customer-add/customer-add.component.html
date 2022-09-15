@@ -1,0 +1,46 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Customer Configurations</h4>
+              <p class="card-category">Complete the details</p>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="customerAddForm" >
+               
+                <div class="row">
+              
+  
+                  <div class="container row col-md-12">
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input  formControlName="companyName" matInput placeholder="Company Name" type="text" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+  
+                  <div class="container row col-md-8 form-group"> 
+                    <label for="statusSelect">Status</label>
+                    <select formControlName="status" class="form-control" id="statusSelectForm">
+                      <option [ngValue]="true">true</option>
+                      <option [ngValue]="false">false</option>
+                    </select>
+                 </div>
+                    
+
+                </div>
+  
+                <button (click)="add()" mat-raised-button type="submit" class="btn btn-danger pull-right">
+                  Create Customer
+                </button>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,1 +1,64 @@
-<p>project-add works!</p>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Project Configurations</h4>
+            <p class="card-category">Complete the details</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="projectAddForm">
+              <div class="row">
+                <div class="container row col-md-8 form-group"> 
+                    <label for="customerSelect">Customer</label>
+                    <select formControlName="customer" class="form-control" id="customerSelectForm">
+                      <option *ngFor="let customer of customers">{{customer?.companyName}} </option>
+                    </select>
+                </div>
+               
+                <div class="container row col-md-8 form-group"> 
+                  <label for="userSelect">Project Leader</label>
+                  <select formControlName="user" class="form-control" id="userSelectForm">
+                    <option *ngFor="let user of users">{{user?.email}}</option>
+                  </select>
+               </div>
+
+                <div class="container row col-md-12">
+                  <div class="col-md-8">
+                    <mat-form-field class="example-full-width">
+                      <input  formControlName="projectName" matInput placeholder="Project Name" type="text" />
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="container row col-md-12">
+                  <div class="col-md-8">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="explanation" matInput placeholder="Explanation" type="text" />
+                    </mat-form-field>
+                  </div>
+
+                </div>
+                  
+                <div class="container row col-md-12">
+                  <div class="col-md-8">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="startedAt" matInput placeholder="StartedAt" type="date" />
+                    </mat-form-field>
+                  </div>
+                </div>
+
+              </div>
+
+              <button (click)="add()" mat-raised-button type="submit" class="btn btn-danger pull-right">
+                Create Project
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -69,6 +69,7 @@
                 <th>Started At</th>
                 <th>E-Mail</th>
                 <th>Assigned By</th>
+                <th>Actions</th>
               </thead>
               <tbody>
                 <tr *ngFor="let userOfProject of userOfProjects">
@@ -82,6 +83,11 @@
                   <td class="text-danger">
                     {{ userOfProject.assignedByEmail }}
                   </td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
+            
+                  </td>
+
                 </tr>
               </tbody>
             </table>

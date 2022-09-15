@@ -19,6 +19,7 @@ import { JobTitleComponent } from '../components/admin/job-title/job-title.compo
 import { ProjectDetailsComponent } from '../components/admin/project-details/project-details.component';
 import { RouterModule } from '@angular/router';
 import { ProjectAddComponent } from '../components/admin/project-add/project-add.component';
+import { CustomerAddComponent } from '../components/admin/customer-add/customer-add.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ProjectAddComponent } from '../components/admin/project-add/project-add
     DepartmentComponent,
     JobTitleComponent,
     ProjectDetailsComponent,
-    ProjectAddComponent
+    ProjectAddComponent,
+    CustomerAddComponent,
   ]
 })
 export class AdminLayoutModule {}
