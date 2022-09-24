@@ -20,6 +20,23 @@ import { ProjectDetailsComponent } from '../components/admin/project-details/pro
 import { RouterModule } from '@angular/router';
 import { ProjectAddComponent } from '../components/admin/project-add/project-add.component';
 import { CustomerAddComponent } from '../components/admin/customer-add/customer-add.component';
+import { UserScoreByProjectComponent } from '../components/admin/user-score-by-project/user-score-by-project.component';
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+import { UserProjectByAdminComponent } from '../components/admin/user-project-by-admin/user-project-by-admin.component';
+
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
+
+
+
+
+
 
 
 @NgModule({
@@ -34,6 +51,8 @@ import { CustomerAddComponent } from '../components/admin/customer-add/customer-
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    FullCalendarModule
+    
     
   ],
   declarations: [
@@ -47,6 +66,8 @@ import { CustomerAddComponent } from '../components/admin/customer-add/customer-
     ProjectDetailsComponent,
     ProjectAddComponent,
     CustomerAddComponent,
+    UserScoreByProjectComponent,
+    UserProjectByAdminComponent, 
   ]
 })
 export class AdminLayoutModule {}

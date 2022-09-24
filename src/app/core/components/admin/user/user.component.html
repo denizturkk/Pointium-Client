@@ -36,6 +36,7 @@
               <th>Department</th>
               <th>Job Title</th>
               <th>E-Mail</th>
+              <th>Actions</th>
             </thead>
             <tbody>
               <tr *ngFor="let user of users">
@@ -45,6 +46,9 @@
                 <th>{{user.departmentName}}</th>
                 <th>{{user.jobTitleName}}</th>
                 <td class="text-info">{{user.email}}</td>
+                <td>
+                  <button routerLink="/users/{{user.id}}/projects" type="button" class="btn btn-primary btn-sm"><i class="fa fa-product-hunt"></i></button>
+                </td>
               </tr>
             </tbody>
           </table>

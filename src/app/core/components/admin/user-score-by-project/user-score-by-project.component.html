@@ -1,0 +1,100 @@
+<div _ngcontent-mrn-c8 class="main-content">
+  <div _ngcontent-mrn-c8 class="container-fluid">
+    <!-- <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-danger card-header-icon">
+            <div class="card-icon">
+              <i class="material-icons">info_outline</i>
+            </div>
+            <p class="card-category">Project Name</p>
+            <h3 class="card-title">{{ userProject.projectName }}</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="material-icons">mood</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon">
+              <i class="material-icons">person </i>
+            </div>
+            <p class="card-category">Employee</p>
+            <h3 class="card-title">
+              {{ userProject.firstName }} {{ userProject.lastName }}
+            </h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="material-icons text-danger">person</i>
+              <a href="javascript:void(0)">{{ userProject.email }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+          <div class="card-header card-header-primary">
+              <h4 class="card-title">{{userProject.projectName}}</h4>
+              <p class="card-category">{{ userProject.firstName }} {{userProject.lastName}} ( {{userProject.email}})</p>
+          </div>
+          <div class="card-body">
+            Started At  :{{userProject.startedAt|date}} <br>
+            Is Active   :{{userProject.status}} <br>
+            Assigned By :{{userProject.assignedByEmail}}
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <div _ngcontent-mrn-c8 class="main-content">
+    <div _ngcontent-mrn-c8 class="container-fluid col-md-12">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+  </div>
+
+  <div _ngcontent-mrn-c8 class="main-content">
+    <div _ngcontent-mrn-c8 class="container-fluid"></div>
+    <div _ngcontent-mrn-c8 class="row">
+      <div class="card">
+        <div class="card-header card-header-warning">
+          <h4 class="card-title">Users In Project</h4>
+          <p class="card-category">Here is a subtitle for this table</p>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+          <table class="table">
+            <thead class="text-danger">
+              <th>Date</th>
+              <th>Date</th>
+              <th>Score Input</th>
+              <th>Score State</th>
+              <th>Created At</th>
+              <th>Holiday Flag</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let userProjectDay of userProjectDays">
+                <th>{{ userProjectDay.calendarDate }}</th>
+                <th>
+                  {{ userProjectDay.fullMonthName }}
+                  {{ userProjectDay.calendarDay }}
+                </th>
+                <th>{{ userProjectDay.scoreTableExplanation }}</th>
+                <th>{{ userProjectDay.userProjectDayApprovalName }}</th>
+                <th>{{ userProjectDay.createdAt }}</th>
+                <th>{{ userProjectDay.holidayFlag }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

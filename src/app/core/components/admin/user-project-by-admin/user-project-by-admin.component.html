@@ -1,0 +1,67 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+          <div class="card">
+              <div class="card-header card-header-tabs card-header-primary">
+                  <div class="nav-tabs-navigation">
+                      <div class="nav-tabs-wrapper">
+                          <span class="nav-tabs-title">Tasks:</span>
+                          <ul class="nav nav-tabs" data-tabs="tabs">
+                              <li class="nav-item active">
+                                  <a href="#Active" class="nav-link" data-toggle="tab">
+                                      <i class="material-icons">bug_report</i> Active
+                                      <div class="ripple-container"></div>
+                                  </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="#Passive" class="nav-link" data-toggle="tab">
+                                      <i class="material-icons">code</i> Passive
+                                      <div class="ripple-container"></div>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-body">
+                  <div class="tab-content">
+                      <div class="tab-pane active" id="Active">
+                        <table class="table">
+                          <thead class="text-danger">
+                         
+                            <th>Project Name</th>
+                            <th>Employee</th>
+                            <th>E-Mail</th>                   
+                            <th>Started At</th>                           
+                            <th>Assigned By</th>
+                            <th>Actions</th>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let userProject of userProjects">
+                              <th>{{ userProject.projectName }}</th>
+                              <th>{{ userProject.firstName}} {{ userProject.lastName}}</th>
+                              <td class="text-info">{{userProject.email}}</td>
+                              <th>{{ userProject.startedAt |date}}</th>
+                              <td class="text-danger">
+                                {{userProject.assignedByEmail}}
+                              </td>
+                              <td>
+                                <!-- degisecek burasi -->
+                                <button routerLink="projects/projectdetails/{{userProject.projectId}}/user/{{userId}}/score" type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    
+                      </div>
+                      <div class="tab-pane" id="Passive">
+                          Second Tab
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

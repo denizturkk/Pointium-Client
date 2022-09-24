@@ -10,6 +10,9 @@ import { AdminLayoutComponent } from './core/components/app/layouts/admin-layout
 import { LoginComponent } from './core/components/app/login/login.component';
 
 
+
+
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -19,13 +22,13 @@ import { LoginComponent } from './core/components/app/login/login.component';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
-    
-   
+
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent, 
+    LoginComponent,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

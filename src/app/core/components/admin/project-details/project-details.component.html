@@ -12,7 +12,7 @@
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">date_range</i> Started At : {{ project.startedAt }}
+              <i class="material-icons">date_range</i> Started At : {{ project.startedAt|date }}
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
                     <i class="material-icons">handshake</i>
                 </div>
                 <p class="card-category">Customer</p>
-                <h3 class="card-title">{{project.companyName}}</h3>
+                <h3 class="card-title">{{project?.companyName}}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -40,12 +40,12 @@
                     <i class="material-icons">person </i>
                 </div>
                 <p class="card-category">Project Leader</p>
-                <h3 class="card-title">{{project. leadByFirstName}} {{project. leadByLastName}}</h3>
+                <h3 class="card-title">{{project?.leadByFirstName}} {{project?.leadByLastName}}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
                     <i class="material-icons text-danger">person</i>
-                    <a href="javascript:void(0)">Assigned By : {{project.assignerMail}}</a>
+                    <a href="javascript:void(0)">Assigned By : {{project?.assignerMail}}</a>
                 </div>
             </div>
         </div>
@@ -78,20 +78,18 @@
                   <th>{{ userOfProject.lastName }}</th>
                   <th>{{ userOfProject.departmentName }}</th>
                   <th>{{ userOfProject.jobTitleName }}</th>
-                  <th>{{ userOfProject.startedAt }}</th>
-                  <td class="text-info">{{ userOfProject.email }}</td>
+                  <th>{{ userOfProject.startedAt |date}}</th>
+                  <td class="text-info">{{userOfProject.email }}</td>
                   <td class="text-danger">
                     {{ userOfProject.assignedByEmail }}
                   </td>
                   <td>
-                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
-            
+                    <button routerLink="/projects/projectdetails/{{project.id}}/user/{{userOfProject.id}}/score" type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
                   </td>
-
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> 
         </div>
      </div>
   </div>

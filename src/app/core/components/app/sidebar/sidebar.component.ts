@@ -15,6 +15,9 @@ export const ADMINCONNECTEDROUTES: RouteInfo[] = [
   { path:'/projects/add', title: 'ProjectAdd',  icon: 'add', class: '' },
   { path:'/users/add', title: 'UserAdd',  icon: 'add', class: '' },
   { path:'/customers/add', title: 'CustomerAdd',  icon: 'add', class: '' },
+  { path:'/projects/projectdetails/:projectid/user/:userid/score', title: 'score',  icon: '', class: '' },
+  { path:'/users/:userid/projects', title: 'UserProjects',  icon: '', class: '' }
+  
 ]
 
 export const ADMINROUTES: RouteInfo[] = [

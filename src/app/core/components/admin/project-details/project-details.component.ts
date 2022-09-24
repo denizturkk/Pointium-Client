@@ -48,11 +48,8 @@ export class ProjectDetailsComponent implements OnInit {
       {
           this.project=response.data;  
           this.dataLoaded=true;
-          
-          
       }
       else{
-
         this.message==response.message;
       }
 

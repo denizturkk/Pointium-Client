@@ -8,6 +8,8 @@ import { ProjectAddComponent } from 'app/core/components/admin/project-add/proje
 import { ProjectDetailsComponent } from 'app/core/components/admin/project-details/project-details.component';
 import { ProjectComponent } from 'app/core/components/admin/project/project.component';
 import { UserAddComponent } from 'app/core/components/admin/user-add/user-add.component';
+import { UserProjectByAdminComponent } from 'app/core/components/admin/user-project-by-admin/user-project-by-admin.component';
+import { UserScoreByProjectComponent } from 'app/core/components/admin/user-score-by-project/user-score-by-project.component';
 import { UserComponent } from 'app/core/components/admin/user/user.component';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 
@@ -23,8 +25,8 @@ export const AdminLayoutRoutes: Routes = [
     {path:"projects/projectdetails/:id", component:ProjectDetailsComponent},
     {path:"projects/add", component:ProjectAddComponent},
     {path:"users/add", component:UserAddComponent},
-    {path:"customers/add", component:CustomerAddComponent}
+    {path:"customers/add", component:CustomerAddComponent},
+    {path:"projects/projectdetails/:projectid/user/:userid/score", component:UserScoreByProjectComponent},
+    {path:'users/:userid/projects', component:UserProjectByAdminComponent }
     
-
-
 ];
