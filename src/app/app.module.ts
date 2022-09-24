@@ -7,9 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './core/modules/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './core/components/app/layouts/admin-layout/admin-layout.component';
-import { CustomerAddComponent } from './core/components/admin/customer-add/customer-add.component';
 import { LoginComponent } from './core/components/app/login/login.component';
-
 
 
 @NgModule({
@@ -21,13 +19,13 @@ import { LoginComponent } from './core/components/app/login/login.component';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    
    
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent,
-    
+    LoginComponent, 
   ],
   providers: [],
   bootstrap: [AppComponent]
